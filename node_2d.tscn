@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c004b88cwn2dq"]
+
+[ext_resource type="Texture2D" uid="uid://bia4wveh3e78a" path="res://jelly.png" id="1_qm3o0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ctm0w"]
+radius = 13.1529
+
+[node name="Node2D" type="Node2D"]
+
+[node name="per1" type="CharacterBody2D" parent="."]
+position = Vector2(111, 141)
+
+[node name="Sprite2D" type="Sprite2D" parent="per1"]
+position = Vector2(-0.5, 6.5)
+scale = Vector2(1.21875, 1.21875)
+texture = ExtResource("1_qm3o0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="per1"]
+position = Vector2(-1, 4)
+shape = SubResource("CircleShape2D_ctm0w")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
